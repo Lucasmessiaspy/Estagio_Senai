@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando a cor de fundo</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        #changeColorButton{
+            width: 120px;
+            height: 60px;
+            border: none;
+            border-radius: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+<button id="changeColorButton">Mudar de cor</button>
+
+<script>
+    $(document).ready(function() {
+        $("#changeColorButton").click(function() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            $("body").css("background-color", randomColor);
+        });
+    });
+</script>
+
+</body>
+</html>
